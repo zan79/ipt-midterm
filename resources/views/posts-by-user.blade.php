@@ -14,20 +14,20 @@
     <div class="card bs br my-3">
       <div class="card-body">
 
-        @if (auth()->user()->gender == 'Male')
+        @if ($user->gender == 'Male')
         <h1 class="card-title text-center img-icon">👦</h1>
         @else
         <h1 class="card-title text-center img-icon">👧</h1>
         @endif
-        <h1 class="text-center fw-bold">{{auth()->user()->name}}</h1>
+        <h1 class="text-center fw-bold">{{$user->name}}</h1>
         <hr>
 
-        <h5>📧 {{auth()->user()->email}}</h5>
+        <h5>📧 {{$user->email}}</h5>
 
         @if (auth()->user()->gender == 'Male')
-        <h5>🚹 {{auth()->user()->gender}}</h5>
+        <h5>🚹 {{$user->gender}}</h5>
         @else
-        <h5>🚺 {{auth()->user()->gender}}</h5>
+        <h5>🚺 {{$user->gender}}</h5>
         @endif
 
       </div>
