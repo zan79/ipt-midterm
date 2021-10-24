@@ -44,8 +44,8 @@
           <button class="btn btn-primary bs float-end" type="submit" style="width: 100px">Post</button>
           <div class="float-end mx-2">
             <select name="category_id" id="category_id" class="form-select">
-              @foreach(App\Models\Category::all() as $c)
-              <option value="{{$c->id}}">{{$c->category}}</option>
+              @foreach(App\Models\Category::all() as $category)
+              <option value="{{$category->id}}">{{$category->category}}</option>
               @endforeach
             </select>
           </div>
